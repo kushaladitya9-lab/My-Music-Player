@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Music Player</title>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Icons (FontAwesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="player-container">
+    <!-- Ambient Background Glow -->
+    <div class="glow-bg"></div>
+
+    <!-- LEFT: Main Player Card -->
+    <div class="music-card">
+      <div class="cover-art">
+        <img src="cover.jpg" id="cover" alt="Album Cover">
+      </div>
+
+      <div class="song-info">
+        <h2 id="title">Track 1</h2>
+        <p id="artist">My Favorite Artist</p>
+      </div>
+
+      <audio src="song1.mp3" id="audio"></audio>
+
+      <div class="progress-box">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" value="0" min="0" max="100">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev" class="control-btn"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="play" class="control-btn play-btn"><i class="fa-solid fa-play" id="play-icon"></i></button>
+        <button id="next" class="control-btn"><i class="fa-solid fa-forward-step"></i></button>
+      </div>
+    </div>
+
+    <!-- RIGHT: Playlist Card -->
+    <div class="playlist-card">
+      <div class="playlist-header">
+        <i class="fa-solid fa-list-ul"></i>
+        <h3>Playlist</h3>
+        <span class="track-count">21 Tracks</span>
+      </div>
+      
+      <!-- Songs list dynamic banegi JavaScript se -->
+      <div class="playlist-list" id="playlist"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
